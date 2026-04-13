@@ -178,7 +178,7 @@ async def run_software_development_team():
     result = await Console(team_chat.run_stream(task = task))
 
     print("\n" + "=" * 60)
-    print("✅ 团队协作完成！")
+    print("✅ 团队协作完成！!")
 
     return result
 

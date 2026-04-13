@@ -48,7 +48,7 @@ class HelloAgentsLLM:
             for chunk in response: #  因为 response 是数据流，所以需要用 for 循环不断接收模型吐出的“数据碎块（chunk）”。chunk是Python对象（类），并不是字典
                 content = chunk.choices[0].delta.content or ""  # 在非流式输出中，我们获取文本用的是 .message.content；但在流式输出中，每次传来的只是增量（delta），即最新生成的那个字或词。都是对象的属性
                 # or "": 这是一个容错处理。有时候数据块可能不包含文本内容（比如流的开头或结尾），这能防止程序抛出 NoneType 错误。
-                # print(content,end="",flush=True) # Python 的 print 函数默认会在每次打印后换行（end="\n"）。将其设置为空字符串 ""，可以确保新的字紧紧贴在刚才的字后面，而不是另起一行。
+                print(content,end="",flush=True) # Python 的 print 函数默认会在每次打印后换行（end="\n"）。将其设置为空字符串 ""，可以确保新的字紧紧贴在刚才的字后面，而不是另起一行。
                 # flush=True 会强行清空缓冲区，强制要求系统立刻把刚收到的字打印到屏幕上，从而形成平滑的打字效果。
                 collected_content.append(content)
             print()
