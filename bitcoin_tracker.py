@@ -353,7 +353,7 @@ def main() -> None:
     _auto_refresh_tick()
 
     st.markdown("---")
-    with st.expander("ℹ️ 使用说明"):
+    with st.expander("ℹ️🚨 使用说明"):
         st.markdown(
             """
         1. **查看价格**：首次进入会自动拉取数据；也可点「刷新价格」。
