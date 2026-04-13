@@ -62,7 +62,7 @@ if __name__ == "__main__":
     try:
         limClient = HelloAgentsLLM()
         exapmpleMessages = [{"role": "system", "content": "You are a good assistant"},
-            {"role": "user", "content": "你知道《咒术回战》这部动漫吗？"}
+            {"role": "user", "content": "你知道《咒术回战》这部动漫吗？如果看过，请顺便评价一下"}
         ]
         print(f"原文:{exapmpleMessages[1]['content']}")
         print("🧠 正在思考...")
